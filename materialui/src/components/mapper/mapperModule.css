@@ -1,0 +1,14 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.blinking-pin {
+  animation: blink 1.5s infinite;
+}
+
+.current-location-pin {
+  animation: blink 2s infinite;
+  filter: drop-shadow(0 0 10px #00ff00);
+}

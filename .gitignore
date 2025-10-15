@@ -1,0 +1,50 @@
+reactapp_prod/
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.pnp.js
+main
+
+**/node_modules/
+
+#testing
+/coverage
+
+# Output of go build
+goserver/goserver_prod
+goserver/goserver
+/build/
+/bin/
+/dist/
+goserver/DiscoveryDrawings/
+
+# Dependency directories (if you use vendoring)
+/vendor/
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+__debug_bin2999675417
