@@ -258,10 +258,10 @@ export default function ManualsForm() {
   // Download all files
   const handleDownloadAll = useCallback(async () => {
     // Add admin check
-    if (!hasRole('Admin')) {
+    /* if (!hasRole('Admin')) {
       setError('Insufficient permissions to download all files');
       return;
-    }
+    } */
 
     if (files.length === 0) {
       setError('No files available to download');
