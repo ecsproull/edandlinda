@@ -311,10 +311,10 @@ export default function ManualsForm() {
 
   // Handle directory download
   const handleDirectoryDownload = async (dirName) => {
-    if (!hasAnyRole(['Admin', 'Manuals'])) {
+    /*if (!hasAnyRole(['Admin', 'Manuals'])) {
       setError('Insufficient permissions to download all files');
       return;
-    }
+    }*/
 
     try {
       const response = await api.files.downloadDirectory(selectedYearMake, selectedModel, dirName);
@@ -464,7 +464,7 @@ export default function ManualsForm() {
 
             {files.length > 0 && (
               <Stack direction="row" spacing={2}>
-                {hasRole('Admin') && (
+                {(
                   <>
                     <Button
                       variant="outlined"
@@ -484,7 +484,7 @@ export default function ManualsForm() {
                     </Button>
                   </>
                 )}
-                {hasAnyRole(['Admin', 'Manuals']) && (<Button
+                {(<Button
                   variant="contained"
                   startIcon={<Download />}
                   onClick={handleDownloadSelected}
